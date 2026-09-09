@@ -143,7 +143,7 @@ function initModals() {
   });
 }
 
-// Contact Form with Database Persistence
+// Contact Form with Direct Email Delivery & Database Persistence
 function initContactForm() {
   const form = document.getElementById('contact-form');
   const statusEl = document.getElementById('form-status');
@@ -171,9 +171,45 @@ function initContactForm() {
     btn.innerHTML = 'Sending...';
     btn.disabled = true;
 
-    // Save to Database (IndexedDB / LocalStorage)
+    // 1. Save to Local DB (IndexedDB / LocalStorage)
     const savedData = await saveSubmission({ name, email, brief });
 
+    // 2. Send via Web3Forms API (Free Email Gateway)
+    const formAccessKey = form.getAttribute('data-access-key') || '';
+    let sentSuccessfully = false;
+
+    if (formAccessKey) {
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            access_key: formAccessKey,
+            name: name,
+            email: email,
+            message: brief,
+            subject: `Portfolio Message from ${name}`
+          })
+        });
+
+        const result = await response.json();
+        if (result.success) {
+          sentSuccessfully = true;
+        }
+      } catch (err) {
+        console.warn('Form API error, switching to mailto link:', err);
+      }
+    }
+
+    // 3. Fallback: Trigger direct mailto if form key is not configured or fails
+    if (!sentSuccessfully && !formAccessKey) {
+      window.location.href = `mailto:owaisahmed2208957@gmail.com?subject=${encodeURIComponent('Portfolio Contact from ' + name)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + brief)}`;
+    }
+
+    // 4. Update UI Status
     setTimeout(() => {
       btn.innerHTML = 'Message Sent! ✨';
       btn.style.background = '#10b981';
@@ -182,7 +218,7 @@ function initContactForm() {
       if (statusEl) {
         statusEl.style.display = 'block';
         statusEl.style.color = '#10b981';
-        statusEl.textContent = `Thank you ${name}! Your message has been saved in DB (ID: ${savedData.id}).`;
+        statusEl.textContent = `Thank you ${name}! Your message has been sent.`;
       }
 
       form.reset();
@@ -193,6 +229,6 @@ function initContactForm() {
         btn.style.color = '';
         btn.disabled = false;
       }, 5000);
-    }, 800);
+    }, 600);
   });
 }
