@@ -1,0 +1,89 @@
+--- PAGE 1 ---
+Owais Ahmed Khan
+Map-marker-altMontbéliard, France Phone+33 753 527 391 Envelopeowaisahmed2208957@gmail.com
+LINKEDINhttps://www.linkedin.com/in/owais-mobile-dev Githubgithub.com/owaisahmed19
+Objectif
+À la recherche d’une alternance en ingénierie logicielle pour appliquer mon expertise technique au sein de
+l’écosystème du logiciel et de l’IoT.
+Proﬁl
+Étudiant international en Master IoT avec une Licence en Informatique et 2 ans d’expérience professionnelle
+en développement logiciel. Spécialisé dans la conception de systèmes de bout en bout du matériel embarqué
+(ESP32, Arduino) au cloud (Azure, Firebase) en mettant l’accent sur les performances, la sécurité (OAuth2, JWT)
+et les architectures propres (MVVM, DevOps, CI/CD).
+Expérience Professionnelle
+Développeur Logiciel & Mobile
+10/2023 – 06/2025
+Innovative Inside — Rawalpindi, Pakistan
+• Développement d’applications Java/Kotlin/Python, création d’API sécurisées, intégration d’algorithmes de
+Machine Learning et surveillance IoT en temps réel avec les meilleures pratiques de cybersécurité.
+• Gestion de bases de données via Retroﬁt ; déploiement de services cloud, Docker sur Linux, et participation aux
+pipelines CI/CD pour des projets IoT distribués.
+Stagiaire Développeur Android
+04/2021 – 06/2021
+Androweb IT Solutions — Attock, Pakistan
+• Développement back-end en Java avec intégration MySQL via Volley pour une gestion sécurisée des données.
+• Déploiement des services cloud Firebase : Authentiﬁcation, base de données en temps réel, stockage.
+Formation
+Master International en Internet des Objets (IoT)
+09/2025 – Présent
+UFR STGI — Université de Franche-Comté, Montbéliard, France
+• Programme approfondi couvrant les systèmes embarqués, les protocoles IoT, le DevOps et la sécurité.
+• Projet de Recherche : Application mobile pour la détection des scolytes (bark beetles) à l’aide d’un modèle
+ML déployé sur le cloud Microsoft Azure.
+Licence en Informatique (Bachelor’s in Computer Science) (GPA : 3.3/4)
+09/2019 – 07/2023
+COMSATS University Islamabad — Attock, Pakistan
+• Programme couvrant le développement logiciel, les bases de données, l’IA et le traitement d’images, ainsi que
+les systèmes embarqués et la sécurité IoT.
+• Projet de ﬁn d’études : Application Android de gestion d’orphelinats intégrant un système de recommandation
+basé sur l’IA avec synchronisation Firebase en temps réel.
+
+--- PAGE 2 ---
+Compétences Techniques
+Langages : C++, Python, Java, Kotlin, JavaScript, PHP, HTML5, CSS3, Node.js, SQL, Bash
+Mobile & Architecture : Android SDK, Jetpack Compose, MVVM/MVP, POO, Design Patterns, API RESTful,
+Agile/Scrum
+Matériel & Embarqué : ESP32, Arduino, NVIDIA Jetson (CUDA), LoRa, Raspberry Pi, Montres Connectées,
+Microcontrôleurs
+IoT & Réseaux : MQTT, BLE, WebSockets, Node-RED, Edge Computing, Acquisition de Données en Temps
+Réel
+Sécurité : OAuth2, JWT, Chiﬀrement, Protocoles Sécurisés, Bonnes Pratiques de Cybersécurité
+Cloud & Données : Microsoft Azure, Firebase, InﬂuxDB, SQL/SQLite (Room, MySQL), Grafana
+IA & Vision par Ordinateur : TensorFlow Lite, Scikit-Learn, OpenCV, OCR, KNN, Réseaux de Neurones,
+Systèmes de Recommandation
+Systèmes & DevOps : Linux (Debian/Ubuntu), Docker, Proxmox, Windows, Git, GitHub, Jenkins (CI/CD),
+Azure DevOps
+Projets
+Classiﬁcation de Scolytes par Intelligence artiﬁcielle(ScolyteNET)
+Développement d’une application Android de bout en bout intégrant des modèles de Deep Learning pour l’identiﬁ-
+cation d’espèces d’insectes.
+Déploiement de l’infrastructure d’IA sur le cloud Microsoft Azure, couplé à Firebase pour l’authentiﬁcation et la
+synchronisation des données en temps réel.
+Passerelle IoT Bidirectionnelle
+Conception d’un système complet d’acquisition de données IoT de bout en bout à l’aide de microcontrôleurs ESP32
+communicant via MQTT.
+Traitement des ﬂux de données via Node-RED et visualisation des métriques en temps réel sur des tableaux de
+bord Grafana/InﬂuxDB avec contrôle des actionneurs à distance.
+F aceGuard-AIhttps://github.com/owaisahmed19/FaceGuard-AI
+Développement d’une application d’intelligence artiﬁcielle dédiée à la reconnaissance faciale sécurisée et au traitement
+de données biométriques.
+Intégration des moteurs YuNet et SFace pour la détection et l’extraction d’embeddings, gestion de base de données
+SQLite, et génération automatisée de rapports PDF analytiques enrichis par Mistral AI.
+Détection de Chute via Montre Connectée
+Application mobile intégrée à une montre connectée pour détecter les chutes en temps réel à l’aide des données du
+capteur accéléromètre.
+Implémentation d’une communication BLE entre la montre et le téléphone, déclenchant des alertes d’urgence
+instantanées lors de la détection d’une chute.
+Système de Surveillance A vancé par T raitement d’Image
+Création d’un système de vidéosurveillance intelligent combinant le traitement d’images en temps réel, l’analyse
+des mouvements et la reconnaissance OCR.
+Application d’algorithmes de vision par ordinateur pour détecter et classer les anomalies, améliorant considérablement
+la précision de la surveillance et le temps de réponse.
+Certiﬁcations
+Introduction à Python — Saylor Academy, Sep 2024
+Atelier de Développement Android — Jan 2022
+Introduction à l’Open Source, Git & GitHub — Oct 2022
+
+--- PAGE 3 ---
+Langues
+Anglais A vancé (C1) | F rançais Intermédiaire (A2) | Ourdou Maternel | Pachto Maternel
