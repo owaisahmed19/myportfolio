@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   --bg-dark: #08080a;
@@ -12,7 +12,7 @@
   --text-dim: #62626e;
   --border-glass: rgba(255, 255, 255, 0.08);
   --border-glow: rgba(255, 85, 29, 0.3);
-  --font-display: 'Syne', sans-serif;
+  --font-display: 'Roboto', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
   --radius-lg: 32px;
   --radius-md: 20px;
@@ -247,12 +247,12 @@ body {
 }
 
 .hero-title {
-  font-family: var(--font-display);
-  font-size: clamp(24px, 3.2vw, 42px);
-  font-weight: 800;
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(26px, 3.5vw, 44px);
+  font-weight: 900;
   line-height: 1.1;
   color: #ffffff;
-  letter-spacing: -0.8px;
+  letter-spacing: -0.5px;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
@@ -402,12 +402,12 @@ body {
 }
 
 .section-title {
-  font-family: var(--font-display);
+  font-family: 'Roboto', sans-serif;
   font-size: clamp(30px, 3.5vw, 44px);
   font-weight: 800;
   line-height: 1.15;
   color: #ffffff;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 .behind-right-content {
@@ -1217,33 +1217,47 @@ a {
 
   .hero-top-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
+    text-align: center;
   }
 
   .hero-left {
     max-width: 100%;
+    align-items: center;
+    text-align: center;
   }
 
   .hero-right-quote {
     max-width: 100%;
-    text-align: left;
+    text-align: center;
     margin-left: 0;
     padding-top: 0;
+    align-items: center;
   }
 
   .hero-portrait-wrapper {
     position: relative;
     bottom: auto;
-    left: auto;
+    left: 0;
+    right: 0;
     transform: none;
-    height: 320px;
-    margin: 20px auto 0;
+    height: auto;
+    width: 100%;
+    max-width: 340px;
+    margin: 24px auto 0;
+    display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .hero-portrait-img {
-    max-height: 320px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    max-height: 360px;
     border-radius: 160px 160px 0 0;
+    display: block;
+    margin: 0 auto;
   }
 
   .hero-card {
@@ -1314,7 +1328,46 @@ a {
   }
 
   .hero-wrapper {
-    padding-top: 130px;
+    padding-top: 125px;
+  }
+
+  .hero-card {
+    padding: 30px 20px 24px;
+    text-align: center;
+  }
+
+  .hero-left {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-right-quote {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-portrait-wrapper {
+    position: relative;
+    left: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-portrait-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    max-height: 310px;
+    border-radius: 140px 140px 0 0;
+    display: block;
+    margin: 0 auto;
   }
 
   /* Grid Stackings */
@@ -1377,16 +1430,16 @@ a {
   }
 
   .hero-wrapper {
-    padding-top: 135px;
+    padding-top: 130px;
   }
 
   .hero-card {
-    padding: 24px 18px 20px;
+    padding: 24px 16px 20px;
     border-radius: 20px;
   }
 
   .hero-title {
-    font-size: clamp(20px, 6.5vw, 28px);
+    font-size: clamp(22px, 6.5vw, 28px);
   }
 
   .hero-subtitle {
@@ -1402,11 +1455,27 @@ a {
   }
 
   .hero-portrait-wrapper {
-    height: 260px;
+    position: relative;
+    left: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    margin: 16px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .hero-portrait-img {
-    max-height: 260px;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    max-height: 270px;
+    border-radius: 120px 120px 0 0;
+    display: block;
+    margin: 0 auto;
   }
 
   .hero-services-bar {

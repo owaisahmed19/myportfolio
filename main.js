@@ -43,12 +43,38 @@ function initNavigation() {
   const header = document.getElementById('header');
   const scrollTopBtn = document.getElementById('scroll-top');
 
+  // Header entrance animation
+  gsap.from('#header', {
+    y: -60,
+    opacity: 0,
+    duration: 1,
+    ease: 'power3.out'
+  });
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
+
+    // Scroll active link highlight
+    const sections = document.querySelectorAll('section[id]');
+    const scrollY = window.pageYOffset;
+
+    sections.forEach((current) => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 120;
+      const sectionId = current.getAttribute('id');
+      const navLink = document.querySelector(`.nav-links a[href*=${sectionId}]`);
+
+      if (navLink) {
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+          navLink.classList.add('active');
+        }
+      }
+    });
   });
 
   if (scrollTopBtn) {
@@ -84,21 +110,99 @@ function initHeroAnimations() {
     .from('.hero-services-bar .service-item', { y: 20, opacity: 0, duration: 0.6, stagger: 0.1 }, '-=0.6');
 }
 
-// Scroll Reveals
+// Scroll Reveals & Grid Animations
 function initScrollReveals() {
-  gsap.utils.toArray('.exp-card, .playstore-card, .education-card, .gallery-card-6, .skill-cat-card').forEach((el) => {
+  // Section Titles & Eyebrows
+  gsap.utils.toArray('.section-title, .eyebrow-text').forEach((el) => {
     gsap.from(el, {
       scrollTrigger: {
         trigger: el,
-        start: 'top 90%',
+        start: 'top 88%',
         toggleActions: 'play none none none'
       },
-      y: 30,
+      y: 35,
       opacity: 0,
-      duration: 0.6,
+      duration: 0.7,
       ease: 'power3.out'
     });
   });
+
+  // Staggered Grid Animations
+  const gridAnimations = [
+    { container: '.playstore-grid-6', items: '.playstore-card' },
+    { container: '.about-badges-grid', items: '.about-badge-card' },
+    { container: '.workshops-certs-grid', items: '.skill-cat-card' }
+  ];
+
+  gridAnimations.forEach(({ container, items }) => {
+    const parentEl = document.querySelector(container);
+    if (parentEl) {
+      const cards = parentEl.querySelectorAll(items);
+      gsap.from(cards, {
+        scrollTrigger: {
+          trigger: parentEl,
+          start: 'top 85%',
+          toggleActions: 'play none none none'
+        },
+        y: 45,
+        opacity: 0,
+        scale: 0.95,
+        duration: 0.7,
+        stagger: 0.12,
+        ease: 'power3.out'
+      });
+    }
+  });
+
+  // Project Gallery Grids (Academic & Master Projects)
+  document.querySelectorAll('.gallery-grid-6').forEach((grid) => {
+    const cards = grid.querySelectorAll('.gallery-card-6');
+    gsap.from(cards, {
+      scrollTrigger: {
+        trigger: grid,
+        start: 'top 85%',
+        toggleActions: 'play none none none'
+      },
+      y: 50,
+      opacity: 0,
+      scale: 0.96,
+      duration: 0.75,
+      stagger: 0.12,
+      ease: 'power3.out'
+    });
+  });
+
+  // Timeline Experience & Education Cards
+  gsap.utils.toArray('.exp-card, .education-card').forEach((el) => {
+    gsap.from(el, {
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 85%',
+        toggleActions: 'play none none none'
+      },
+      y: 45,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'power3.out'
+    });
+  });
+
+  // Contact Form Card
+  const contactCard = document.querySelector('.contact-card-box');
+  if (contactCard) {
+    gsap.from(contactCard, {
+      scrollTrigger: {
+        trigger: contactCard,
+        start: 'top 85%',
+        toggleActions: 'play none none none'
+      },
+      scale: 0.95,
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'power3.out'
+    });
+  }
 }
 
 // Modal Handlers
