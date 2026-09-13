@@ -117,13 +117,13 @@ function initScrollReveals() {
     gsap.from(el, {
       scrollTrigger: {
         trigger: el,
-        start: 'top 88%',
+        start: 'top 95%',
         toggleActions: 'play none none none'
       },
-      y: 35,
-      opacity: 0,
-      duration: 0.7,
-      ease: 'power3.out'
+      y: 25,
+      duration: 0.6,
+      ease: 'power3.out',
+      clearProps: 'all'
     });
   });
 
@@ -141,15 +141,14 @@ function initScrollReveals() {
       gsap.from(cards, {
         scrollTrigger: {
           trigger: parentEl,
-          start: 'top 85%',
+          start: 'top 95%',
           toggleActions: 'play none none none'
         },
-        y: 45,
-        opacity: 0,
-        scale: 0.95,
-        duration: 0.7,
-        stagger: 0.12,
-        ease: 'power3.out'
+        y: 30,
+        duration: 0.6,
+        stagger: 0.08,
+        ease: 'power3.out',
+        clearProps: 'all'
       });
     }
   });
@@ -160,15 +159,14 @@ function initScrollReveals() {
     gsap.from(cards, {
       scrollTrigger: {
         trigger: grid,
-        start: 'top 85%',
+        start: 'top 95%',
         toggleActions: 'play none none none'
       },
-      y: 50,
-      opacity: 0,
-      scale: 0.96,
-      duration: 0.75,
-      stagger: 0.12,
-      ease: 'power3.out'
+      y: 30,
+      duration: 0.6,
+      stagger: 0.08,
+      ease: 'power3.out',
+      clearProps: 'all'
     });
   });
 
@@ -177,13 +175,13 @@ function initScrollReveals() {
     gsap.from(el, {
       scrollTrigger: {
         trigger: el,
-        start: 'top 85%',
+        start: 'top 95%',
         toggleActions: 'play none none none'
       },
-      y: 45,
-      opacity: 0,
-      duration: 0.8,
-      ease: 'power3.out'
+      y: 30,
+      duration: 0.6,
+      ease: 'power3.out',
+      clearProps: 'all'
     });
   });
 
@@ -193,16 +191,20 @@ function initScrollReveals() {
     gsap.from(contactCard, {
       scrollTrigger: {
         trigger: contactCard,
-        start: 'top 85%',
+        start: 'top 95%',
         toggleActions: 'play none none none'
       },
-      scale: 0.95,
-      y: 40,
-      opacity: 0,
-      duration: 0.8,
-      ease: 'power3.out'
+      y: 30,
+      duration: 0.6,
+      ease: 'power3.out',
+      clearProps: 'all'
     });
   }
+
+  // Refresh ScrollTrigger after images and layout stabilize
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 300);
 }
 
 // Modal Handlers
